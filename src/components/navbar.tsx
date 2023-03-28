@@ -3,16 +3,12 @@ import { useRouter } from "next/router";
 import { Navbar, Dropdown, Button, Menu } from "react-daisyui";
 
 const navigation = [
+  { name: "Battlegrounds", href: "/battlegrounds" },
+  { name: "Racer", href: "/racer" },
   {
-    name: "GAMES",
+    name: "Resources",
     submenu: [
-      { name: "Battlegrounds", href: "/battlegrounds" },
-      { name: "Racer", href: "/racer" },
-    ],
-  },
-  {
-    name: "HELP",
-    submenu: [
+      { name: "Lore", href: "/#" },
       {
         name: "White Paper",
         href: "/#",
@@ -21,23 +17,17 @@ const navigation = [
       { name: "Strategy Guide", href: "/#" },
     ],
   },
+
   {
-    name: "SHOWCASE",
+    name: "About us",
     submenu: [
-      { name: "BattleFly Editions", href: "/#" },
-      { name: "Shop", href: "/#" },
-    ],
-  },
-  {
-    name: "INFO",
-    submenu: [
-      { name: "Lore", href: "/#" },
       { name: "Team", href: "/team" },
       { name: "Careers", href: "/careers" },
     ],
   },
+  { name: "Shop", href: "/#" },
   {
-    name: "NEWS",
+    name: "News",
     href: "/#",
   },
 ];
@@ -48,8 +38,6 @@ function classNames(...classes: string[]) {
 
 const NavbarComponent = () => {
   const router = useRouter();
-
-  console.log(router.pathname);
 
   return (
     <div className="flex w-full items-center justify-center gap-2 p-4 pb-40 font-sans">
@@ -104,7 +92,7 @@ const NavbarComponent = () => {
           </Link>
         </Navbar.Start>
         <Navbar.Center className="hidden lg:flex">
-          <Menu horizontal className="p-0">
+          <Menu horizontal className="gap-2 p-0">
             {navigation.map((item) => {
               if (item.submenu) {
                 return (
@@ -121,7 +109,7 @@ const NavbarComponent = () => {
                         <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                       </svg>
                     </div>
-                    <Menu className="bg-base-400 p-2">
+                    <Menu className="bg-base-100 p-2">
                       {item.submenu.map((subItem) => (
                         <Menu.Item key={subItem.name}>
                           <Link href={subItem.href}>{subItem.name}</Link>
