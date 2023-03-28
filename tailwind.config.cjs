@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('tailwindcss').Config} */
+
 const config = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
