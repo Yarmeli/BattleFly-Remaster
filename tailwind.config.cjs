@@ -20,6 +20,5 @@ const config = {
     ],
   },
 };
-// #06091f
 
 module.exports = config;
