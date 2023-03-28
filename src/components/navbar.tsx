@@ -163,7 +163,7 @@ const NavbarComponent = () => {
             })}
           </Menu>
         </Navbar.Center>
-        <Navbar.End>
+        <Navbar.End className="lg:justify-center">
           <Button className="text-md btn-primary font-bold uppercase">
             Play
           </Button>
