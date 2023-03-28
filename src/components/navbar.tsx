@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { type NextRouter, useRouter } from "next/router";
 import { Navbar, Dropdown, Button, Menu } from "react-daisyui";
@@ -59,7 +60,7 @@ const NavbarComponent = () => {
   const router = useRouter();
 
   return (
-    <div className="flex w-full items-center justify-center gap-2 p-4 lg:px-16">
+    <div className="flex w-full items-center justify-center p-4 lg:px-16">
       <Navbar>
         <Navbar.Start>
           <Dropdown>
@@ -113,8 +114,16 @@ const NavbarComponent = () => {
               })}
             </Dropdown.Menu>
           </Dropdown>
-          <Link href="/" className="btn-ghost btn text-xl normal-case">
-            BattleFly
+          <Link
+            href="/"
+            className="btn-ghost btn p-0 text-xl normal-case hover:bg-base-100"
+          >
+            <Image
+              src="/Logo.png"
+              alt="BattleFly Logo"
+              width={150}
+              height={150}
+            />
           </Link>
         </Navbar.Start>
         <Navbar.Center className="hidden lg:flex">
