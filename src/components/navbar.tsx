@@ -1,6 +1,11 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { type NextRouter, useRouter } from "next/router";
 import { Navbar, Dropdown, Button, Menu } from "react-daisyui";
+
+type NavigationItemType = {
+  name: string;
+  href: string;
+};
 
 const navigation = [
   { name: "Battlegrounds", href: "/battlegrounds" },
@@ -8,13 +13,13 @@ const navigation = [
   {
     name: "Resources",
     submenu: [
-      { name: "Lore", href: "/#" },
+      { name: "Lore", href: "#" },
       {
         name: "White Paper",
-        href: "/#",
+        href: "#",
       },
       { name: "FAQ", href: "/faq" },
-      { name: "Strategy Guide", href: "/#" },
+      { name: "Strategy Guide", href: "#" },
     ],
   },
 
@@ -25,10 +30,10 @@ const navigation = [
       { name: "Careers", href: "/careers" },
     ],
   },
-  { name: "Shop", href: "/#" },
+  { name: "Shop", href: "#" },
   {
     name: "News",
-    href: "/#",
+    href: "#",
   },
 ];
 
@@ -36,11 +41,25 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
+function activeNavbarLink(item: NavigationItemType, router: NextRouter) {
+  return (
+    <Link
+      href={item.href}
+      className={classNames(
+        router.pathname == item.href ? "btn-active" : "",
+        "btn-ghost rounded-xl"
+      )}
+    >
+      {item.name}
+    </Link>
+  );
+}
+
 const NavbarComponent = () => {
   const router = useRouter();
 
   return (
-    <div className="flex w-full items-center justify-center gap-2 p-4 pb-40 font-sans">
+    <div className="flex w-full items-center justify-center gap-2 p-4 lg:px-16">
       <Navbar>
         <Navbar.Start>
           <Dropdown>
@@ -61,30 +80,37 @@ const NavbarComponent = () => {
               </svg>
             </Button>
             <Dropdown.Menu tabIndex={0} className="menu-compact mt-3 w-52">
-              <Dropdown.Item>Item 1</Dropdown.Item>
-              <li tabIndex={0}>
-                <a className="justify-between">
-                  Parent
-                  <svg
-                    className="fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                  </svg>
-                </a>
-                <ul className="bg-base-100 p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <Dropdown.Item>Item 3</Dropdown.Item>
+              {navigation.map((item) => {
+                if (item.submenu) {
+                  return (
+                    <li tabIndex={0} key={item.name}>
+                      <div className="btn-ghost justify-between">
+                        {item.name}
+                        <svg
+                          className="fill-current"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={24}
+                          height={24}
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                        </svg>
+                      </div>
+                      <ul className="bg-base-100 p-2">
+                        {item.submenu.map((subItem) => (
+                          <li key={subItem.name}>
+                            {activeNavbarLink(subItem, router)}
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  );
+                } else {
+                  return (
+                    <li key={item.name}>{activeNavbarLink(item, router)}</li>
+                  );
+                }
+              })}
             </Dropdown.Menu>
           </Dropdown>
           <Link href="/" className="btn-ghost btn text-xl normal-case">
@@ -112,7 +138,7 @@ const NavbarComponent = () => {
                     <Menu className="bg-base-100 p-2">
                       {item.submenu.map((subItem) => (
                         <Menu.Item key={subItem.name}>
-                          <Link href={subItem.href}>{subItem.name}</Link>
+                          {activeNavbarLink(subItem, router)}
                         </Menu.Item>
                       ))}
                     </Menu>
@@ -121,15 +147,7 @@ const NavbarComponent = () => {
               } else {
                 return (
                   <Menu.Item key={item.name}>
-                    <Link
-                      href={item.href}
-                      className={classNames(
-                        router.pathname == item.href ? "btn-active" : "",
-                        "btn-ghost rounded-xl"
-                      )}
-                    >
-                      {item.name}
-                    </Link>
+                    {activeNavbarLink(item, router)}
                   </Menu.Item>
                 );
               }
@@ -137,7 +155,9 @@ const NavbarComponent = () => {
           </Menu>
         </Navbar.Center>
         <Navbar.End>
-          <Button className="text-md btn-primary font-bold">PLAY</Button>
+          <Button className="text-md btn-primary font-bold uppercase">
+            Play
+          </Button>
         </Navbar.End>
       </Navbar>
     </div>
