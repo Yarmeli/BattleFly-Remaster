@@ -60,7 +60,7 @@ const NavbarComponent = () => {
   const router = useRouter();
 
   return (
-    <div className="flex w-full items-center justify-center p-4 lg:px-16">
+    <div className="flex w-full items-center justify-center bg-base-300 p-4 lg:px-16">
       <Navbar>
         <Navbar.Start className="lg:justify-center">
           <Dropdown>
