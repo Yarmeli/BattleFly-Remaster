@@ -10,8 +10,16 @@ const config = {
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: ["halloween"],
+    themes: [
+      {
+        halloween: {
+          ...require("daisyui/src/colors/themes")["[data-theme=halloween]"],
+          "base-100": "#151d30",
+        },
+      },
+    ],
   },
 };
+// #06091f
 
 module.exports = config;
