@@ -48,7 +48,7 @@ function activeNavbarLink(item: NavigationItemType, router: NextRouter) {
       href={item.href}
       className={classNames(
         router.pathname == item.href ? "btn-active" : "",
-        "btn-ghost rounded-xl"
+        "btn-ghost z-10 rounded-xl font-bold uppercase"
       )}
     >
       {item.name}
@@ -62,7 +62,7 @@ const NavbarComponent = () => {
   return (
     <div className="flex w-full items-center justify-center p-4 lg:px-16">
       <Navbar>
-        <Navbar.Start>
+        <Navbar.Start className="lg:justify-center">
           <Dropdown>
             <Button color="ghost" tabIndex={0} className="lg:hidden">
               <svg
@@ -85,7 +85,7 @@ const NavbarComponent = () => {
                 if (item.submenu) {
                   return (
                     <li tabIndex={0} key={item.name}>
-                      <div className="btn-ghost justify-between">
+                      <div className="btn-ghost z-10 justify-between rounded-xl font-bold uppercase">
                         {item.name}
                         <svg
                           className="fill-current"
@@ -116,12 +116,12 @@ const NavbarComponent = () => {
           </Dropdown>
           <Link
             href="/"
-            className="btn-ghost btn p-0 text-xl normal-case hover:bg-base-100"
+            className="btn-ghost btn h-full p-0 align-top text-xl normal-case"
           >
             <Image
               src="/Logo.png"
               alt="BattleFly Logo"
-              width={150}
+              width={200}
               height={150}
             />
           </Link>
@@ -132,7 +132,7 @@ const NavbarComponent = () => {
               if (item.submenu) {
                 return (
                   <Menu.Item tabIndex={0} key={item.name}>
-                    <div className="rounded-xl">
+                    <div className="btn-ghost z-10 rounded-xl font-bold uppercase">
                       {item.name}
                       <svg
                         className="fill-current"
