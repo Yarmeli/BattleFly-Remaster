@@ -5,8 +5,8 @@ import { Footer } from "react-daisyui";
 
 function FooterComponent() {
   return (
-    <Footer className="items-center bg-base-300 p-4 text-neutral-content">
-      <div className="flex flex-row items-center gap-4 align-middle">
+    <Footer className="place-items-center items-center bg-base-300 p-4 text-neutral-content md:place-items-stretch">
+      <div className="flex flex-col items-center gap-4 align-middle md:flex-row">
         <Image
           src="/small_logo.jpg"
           alt="Smaller BattleFly logo"
@@ -17,7 +17,7 @@ function FooterComponent() {
         <p>© {new Date().getFullYear()} BattleFly. All Rights Reserved.</p>
       </div>
 
-      <div className="flex flex-row items-center gap-4 align-middle">
+      <div className="flex flex-col items-center gap-4 align-middle md:flex-row">
         <Link href="mailto:support@battlefly.game" className="link-hover link">
           Contact Us
         </Link>
@@ -40,7 +40,8 @@ function FooterComponent() {
           Privacy Policy
         </Link>
       </div>
-      <div className="flex flex-row items-center gap-4 justify-self-end align-middle">
+
+      <div className="flex flex-col items-center gap-4 align-middle md:flex-row md:justify-self-end">
         <div className="grid grid-flow-col gap-4">
           <Link
             href="https://twitter.com/battleflygame"
