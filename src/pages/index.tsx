@@ -1,5 +1,6 @@
 import HeroComponent from "@/components/home/hero";
 import { type NextPage } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 const Home: NextPage = () => {
@@ -134,6 +135,54 @@ const Home: NextPage = () => {
           </div>
           <div className="hidden w-full md:flex"></div>
           <div className="hidden w-full md:flex"></div>
+        </div>
+      </div>
+
+      {/* Content 4 */}
+
+      <div className="hero bg-base-200">
+        <div className="hero-content flex-col md:flex-row">
+          <Image
+            width={500}
+            height={300}
+            src="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/64084ae21004c565272df205_Image-p-500.png"
+            alt="Image of $Magic token and GFLY token"
+            className="h-full w-full animate-pulse rounded-3xl shadow-xl shadow-primary"
+          />
+
+          <div className="hidden w-full lg:flex"></div>
+          <div className="p-5 text-start">
+            <h1 className="text-3xl font-bold uppercase">
+              Secured by GFLY and powered by MAGIC
+            </h1>
+            <p className="py-6">
+              BattleFly is powered by $Magic, a currency purpose built to enable
+              econimic and narrative based connection and compatability across a
+              variety of games and metaverses. Through a shared token and
+              resources, each game within the Treasure Dao ecosystem strengthens
+              and supports one another.
+            </p>
+            <p className="pb-6">
+              gFLY is a governance token that runs the BattleFly network,
+              including Games, Treasury and Flywheel Staking. To make the
+              network go, gFLY holders are rewarded for staking and providing
+              security to the network.
+            </p>
+            <p className="pb-6">
+              You can buy $MAGIC on SushiSwap and GLFY on MagicSwap
+            </p>
+            <div className="flex flex-row gap-3">
+              <Link href="https://app.sushi.com/en/swap" target="_blank">
+                <button className="btn-outline btn font-bold">Buy Magic</button>
+              </Link>
+              <Link
+                href="https://magicswap.lol/?input=MAGIC&output=GFLY"
+                target="_blank"
+              >
+                <button className="btn-outline btn font-bold">Buy GFLY</button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>
