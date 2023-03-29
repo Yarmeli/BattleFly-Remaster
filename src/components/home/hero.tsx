@@ -2,7 +2,7 @@ import React from "react";
 
 function HeroComponent() {
   return (
-    <div className="hero bg-base-200">
+    <div className="hero bg-base-200 pb-5">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="aspect-video">
           <video
