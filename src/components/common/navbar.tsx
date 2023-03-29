@@ -116,7 +116,7 @@ const NavbarComponent = () => {
           </Dropdown>
           <Link
             href="/"
-            className="btn-ghost btn h-full p-0 align-top text-xl normal-case"
+            className="btn-ghost btn h-full p-0 align-top text-xl normal-case hover:bg-base-300"
           >
             <Image
               src="/Logo.png"
