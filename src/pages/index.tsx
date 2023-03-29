@@ -76,7 +76,7 @@ const Home: NextPage = () => {
 
       {/* Content 4 */}
 
-      <div className="hero bg-base-200">
+      <div className="hero bg-base-200 pb-5">
         <div className="hero-content flex-col md:flex-row">
           <Image
             width={500}
