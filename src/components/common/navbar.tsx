@@ -164,8 +164,8 @@ const NavbarComponent = () => {
           </Menu>
         </Navbar.Center>
         <Navbar.End className="lg:justify-center">
-          <Button className="text-md btn-primary font-bold uppercase">
-            Play
+          <Button className="text-md btn-primary -skew-x-12 font-bold uppercase">
+            <p className="skew-x-12">Play</p>
           </Button>
         </Navbar.End>
       </Navbar>
