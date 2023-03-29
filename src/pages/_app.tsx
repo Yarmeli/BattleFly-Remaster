@@ -2,8 +2,8 @@ import { type AppType } from "next/dist/shared/lib/utils";
 
 import "@/styles/globals.css";
 import Head from "next/head";
-import NavbarComponent from "@/components/navbar";
-import FooterComponent from "@/components/footer";
+import NavbarComponent from "@/components/common/navbar";
+import FooterComponent from "@/components/common/footer";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
