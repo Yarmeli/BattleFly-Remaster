@@ -109,13 +109,17 @@ const Home: NextPage = () => {
             </p>
             <div className="flex flex-row gap-3">
               <Link href="https://app.sushi.com/en/swap" target="_blank">
-                <button className="btn-outline btn font-bold">Buy Magic</button>
+                <button className="btn-outline btn -skew-x-12 font-bold">
+                  <p className="skew-x-12">Buy Magic</p>
+                </button>
               </Link>
               <Link
                 href="https://magicswap.lol/?input=MAGIC&output=GFLY"
                 target="_blank"
               >
-                <button className="btn-outline btn font-bold">Buy GFLY</button>
+                <button className="btn-outline btn -skew-x-12 font-bold">
+                  <p className="skew-x-12">Buy GFLY</p>
+                </button>
               </Link>
             </div>
           </div>
