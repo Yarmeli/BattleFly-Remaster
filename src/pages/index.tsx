@@ -94,7 +94,7 @@ const Home: NextPage = () => {
       {/* Content 3 */}
 
       <div
-        className="hero bg-base-100 bg-left bg-blend-lighten md:bg-cover"
+        className="hero bg-base-100 bg-left bg-blend-color-dodge md:bg-cover md:bg-blend-lighten"
         style={{
           backgroundImage:
             "url(https://assets.website-files.com/61ecf535450144ab4fe1e3c0/64084acb19bdd63e06c2e122_Tex-R-Image-Full-Width.png)",
