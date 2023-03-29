@@ -48,7 +48,7 @@ function activeNavbarLink(item: NavigationItemType, router: NextRouter) {
       href={item.href}
       className={classNames(
         router.pathname == item.href ? "btn-active" : "",
-        "btn-ghost z-10 rounded-xl font-bold uppercase"
+        "btn-ghost z-20 rounded-xl font-bold uppercase"
       )}
     >
       {item.name}
@@ -84,8 +84,8 @@ const NavbarComponent = () => {
               {navigation.map((item) => {
                 if (item.submenu) {
                   return (
-                    <li tabIndex={0} key={item.name}>
-                      <div className="btn-ghost z-10 justify-between rounded-xl font-bold uppercase">
+                    <li tabIndex={0} key={item.name} className="z-20">
+                      <div className="btn-ghost z-20 justify-between rounded-xl font-bold uppercase">
                         {item.name}
                         <svg
                           className="fill-current"
@@ -97,7 +97,7 @@ const NavbarComponent = () => {
                           <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                         </svg>
                       </div>
-                      <ul className="bg-base-100 p-2">
+                      <ul className="z-20 bg-base-100 p-2">
                         {item.submenu.map((subItem) => (
                           <li key={subItem.name}>
                             {activeNavbarLink(subItem, router)}
@@ -131,8 +131,8 @@ const NavbarComponent = () => {
             {navigation.map((item) => {
               if (item.submenu) {
                 return (
-                  <Menu.Item tabIndex={0} key={item.name}>
-                    <div className="btn-ghost z-10 rounded-xl font-bold uppercase">
+                  <Menu.Item tabIndex={0} key={item.name} className="z-20">
+                    <div className="btn-ghost z-20 rounded-xl font-bold uppercase">
                       {item.name}
                       <svg
                         className="fill-current"
@@ -144,7 +144,7 @@ const NavbarComponent = () => {
                         <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                       </svg>
                     </div>
-                    <Menu className="bg-base-100 p-2">
+                    <Menu className="z-20 bg-base-100 p-2">
                       {item.submenu.map((subItem) => (
                         <Menu.Item key={subItem.name}>
                           {activeNavbarLink(subItem, router)}
