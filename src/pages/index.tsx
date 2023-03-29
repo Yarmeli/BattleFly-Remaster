@@ -7,6 +7,8 @@ const Home: NextPage = () => {
     <>
       <HeroComponent />
 
+      {/* TODO: Refactor these contents into a component that can be reused */}
+
       {/* Content 1 */}
       <div
         className="hero bg-base-200 bg-right bg-blend-color-dodge md:bg-cover"
@@ -81,6 +83,52 @@ const Home: NextPage = () => {
             >
               <button className="btn-outline btn my-4 font-bold">
                 Buy a BattleFly
+              </button>
+            </Link>
+          </div>
+          <div className="hidden w-full md:flex"></div>
+          <div className="hidden w-full md:flex"></div>
+        </div>
+      </div>
+
+      {/* Content 3 */}
+
+      <div
+        className="hero bg-base-100 bg-left bg-blend-lighten md:bg-cover"
+        style={{
+          backgroundImage:
+            "url(https://assets.website-files.com/61ecf535450144ab4fe1e3c0/64084acb19bdd63e06c2e122_Tex-R-Image-Full-Width.png)",
+          transform: "scaleX(-1)",
+        }}
+      >
+        <div
+          className="hero-content flex-col md:flex-row"
+          // undo transformation
+          style={{ transform: "scaleX(-1)" }}
+        >
+          <div className="p-5 text-start">
+            <h1 className="text-3xl font-bold uppercase">Play to Earn</h1>
+            <p className="py-6">
+              Ready to join the action? Here&apos;s how you can play and win in
+              BattleFly Battlegrounds.
+            </p>
+            <p className="pb-6">
+              Our matchmaking system will pit you against other BattleFlys in
+              intense PVP battles. Before each battle, both players will stake a
+              small amount of the in-game currency, MAGIC, on the outcome. If
+              you come out on top, you&apos;ll receive your opponent&apos;s
+              staked MAGIC. Players with a win % greater than 53% will steadily
+              grow their earnings as they will accumulate more Magic than they
+              lose.
+            </p>
+            <p className="pb-6">
+              However, be mindful of your strategy and the strategy of others -
+              playing without a solid plan or with a poorly equipped BattleFly
+              will result in a gradual loss of your staked MAGIC over time.
+            </p>
+            <Link href="/battlegrounds">
+              <button className="btn-outline btn my-4 font-bold">
+                Find out more
               </button>
             </Link>
           </div>
