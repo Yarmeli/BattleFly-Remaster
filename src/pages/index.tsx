@@ -43,6 +43,51 @@ const Home: NextPage = () => {
           <div className="hidden w-full md:flex"></div>
         </div>
       </div>
+
+      {/* Content 2 */}
+
+      <div
+        className="hero bg-base-300 bg-left bg-blend-color-dodge"
+        style={{
+          backgroundImage:
+            "url(https://assets.website-files.com/61ecf535450144ab4fe1e3c0/64084a7b43fefc233a10a0e5_Image-p-800.png)",
+          transform: "scale(1) skew(0deg,-2deg)",
+        }}
+      >
+        <div
+          className="hero-content flex-col md:flex-row-reverse"
+          // undo transformation
+          style={{ transform: "scale(1) skew(0deg,2deg)" }}
+        >
+          <div className="p-5 text-start">
+            <h1 className="text-3xl font-bold uppercase">
+              The BattleFly - A beautiful Assassin
+            </h1>
+            <p className="py-6">
+              Each BattleFly is a one-of-a-kind blend of brutal power and
+              stunning beauty with the potential to deliver a positive return on
+              investment.
+            </p>
+            <p className="pb-6">
+              A BattleFly&apos;s value is determined by many factors and not
+              rarity alone. Utilizing quality mods with strong synergy is key,
+              making both common and uncommon models capable of dominating the
+              game.
+            </p>
+            <p> Enter the Hyperdome and join the action!</p>
+            <Link
+              href="https://trove.treasure.lol/collection/battlefly"
+              target="_blank"
+            >
+              <button className="btn-outline btn my-4 font-bold">
+                Buy a BattleFly
+              </button>
+            </Link>
+          </div>
+          <div className="hidden w-full md:flex"></div>
+          <div className="hidden w-full md:flex"></div>
+        </div>
+      </div>
     </>
   );
 };
