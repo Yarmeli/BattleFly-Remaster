@@ -5,7 +5,7 @@ import { Footer } from "react-daisyui";
 
 function FooterComponent() {
   return (
-    <Footer className="place-items-center items-center bg-base-300 p-4 text-neutral-content md:place-items-stretch">
+    <Footer className="place-items-center items-center bg-base-300 p-4 md:place-items-stretch">
       <div className="flex flex-col items-center gap-4 align-middle md:flex-row">
         <Image
           src="/small_logo.jpg"
