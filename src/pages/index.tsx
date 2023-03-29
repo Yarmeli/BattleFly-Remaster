@@ -1,4 +1,4 @@
-import HeroComponent from "@/components/home/hero";
+import HeroVideoComponent from "@/components/home/heroVideo";
 import HeroImageComponent from "@/components/home/heroImage";
 import { type NextPage } from "next";
 import Image from "next/image";
@@ -7,9 +7,13 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <>
-      <HeroComponent />
-
-      {/* TODO: Refactor these contents into a component that can be reused */}
+      <HeroVideoComponent
+        videoURL="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/63ef16aa854a6348aa36dfdc_BattleflyVideo-transcode.mp4"
+        title="Battlegrounds"
+        description={
+          "A Play to Earn Web3 strategy game\r\n" + "Ready for a challenge?"
+        }
+      />
 
       {/* Content 1 */}
       <HeroImageComponent
