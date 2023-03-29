@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function HeroComponent() {
@@ -18,7 +19,14 @@ function HeroComponent() {
           <p className="py-6">
             A Play to Earn Web3 strategy game<br></br>Ready for a challenge?
           </p>
-          <button className="btn-primary btn font-bold">Play Now</button>
+          <div className="flex flex-row gap-3">
+            <button className="btn-primary btn font-bold">Play Now</button>
+            <Link href="https://discord.gg/battlefly-game" target="_blank">
+              <button className="btn-outline btn font-bold">
+                Join Discord
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
