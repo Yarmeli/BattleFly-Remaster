@@ -32,7 +32,7 @@ function HeroImageComponent({
     <div
       className={classNames(
         reverse ? "bg-base-300 bg-left" : "bg-base-200 bg-right",
-        "hero bg-blend-color-dodge md:bg-cover",
+        "hero bg-blend-color-dodge md:bg-cover md:bg-blend-lighten",
         divCustomClasses ? divCustomClasses : ""
       )}
       style={{
