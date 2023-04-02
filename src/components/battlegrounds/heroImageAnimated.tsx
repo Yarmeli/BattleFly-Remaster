@@ -81,9 +81,7 @@ function HeroAnimatedImageComponent({
           >
             {secondaryTitle}
           </motion.h2>
-          <motion.p variants={childVariants} className="pb-6">
-            {description}
-          </motion.p>
+          <motion.p variants={childVariants}>{description}</motion.p>
         </motion.div>
       </div>
     </div>
