@@ -7,7 +7,7 @@ function HeroFullVideoComponent({ videoURL, title }: Props) {
   return (
     <div className="hero w-full bg-base-200 pb-5">
       <div className="hero-content w-full flex-col lg:flex-row-reverse">
-        <div className="relative w-full">
+        <div className="relative w-full p-5 sm:p-8 md:p-16">
           <video
             className="relative z-0 h-full w-full -skew-x-12 rounded-3xl opacity-40 shadow-xl shadow-secondary"
             autoPlay
