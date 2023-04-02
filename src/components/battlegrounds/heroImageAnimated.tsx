@@ -63,7 +63,7 @@ function HeroAnimatedImageComponent({
 
         <div className="hidden grow lg:flex"></div>
         <motion.div
-          className="p-5 text-start"
+          className="overflow-hidden p-5 text-start"
           variants={parentVariants}
           initial="hidden"
           whileInView={"visible"}
