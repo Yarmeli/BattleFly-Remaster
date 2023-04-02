@@ -21,6 +21,8 @@ const config = {
         halloween: {
           ...require("daisyui/src/colors/themes")["[data-theme=halloween]"],
           "base-100": "#151d30",
+          secondary: "#2dd4bf",
+          accent: "#991b1b",
         },
       },
     ],
