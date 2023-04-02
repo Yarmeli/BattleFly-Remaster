@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 type Props = {
   videoURL: string;
   title: string;
@@ -11,7 +9,7 @@ function HeroFullVideoComponent({ videoURL, title }: Props) {
       <div className="hero-content w-full flex-col lg:flex-row-reverse">
         <div className="relative w-full">
           <video
-            className="relative z-0 h-full w-full -skew-x-12 rounded-3xl opacity-40 shadow-xl shadow-primary"
+            className="relative z-0 h-full w-full -skew-x-12 rounded-3xl opacity-40 shadow-xl shadow-secondary"
             autoPlay
             loop
             muted
