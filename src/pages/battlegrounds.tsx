@@ -52,6 +52,63 @@ const Home: NextPage = () => {
         secondaryTitle="Reap real rewards"
         description="Crush your rivals and earn valuable rewards including Magic."
       />
+
+      {/* Swipe */}
+
+      <SwiperComponent
+        images={[
+          <HeroSlideImageComponent
+            key="slide-1"
+            imageURL="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/63efa24d45ff3daa92ce3f3f_Arenas_bk.png"
+            imageTransform="scaleX(-1)"
+            title="The Arenas"
+            description={`
+              To start, BattleFlys will be randomly selected to battle using their load-out in the Proving Grounds.
+              Advancement to the Hyperdome is determined by the BattleFly's performance.\r\n
+              
+              The Hyperdome is where BattleFlys compete for recognition and rewards. Once your BattleFly earns its Hyperdome Mark, 
+              it's time to leave the Proving Grounds behind and enter a new arena of high-stakes battles.\r\n
+
+              Combat matchmaking in the Hyperdome is based on BattleFly rank and RNG. Two BattleFlys engage in combat using their 
+              customised load-out and the victor earns the rewards.
+      `}
+            btnLink="https://play.battlefly.game"
+            btnText="Get Started"
+          />,
+
+          <HeroSlideImageComponent
+            key="slide-2"
+            imageURL="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/63efc4a31baf3ae7b67c6ff3_Arenas_bk1.png"
+            title="Ranking"
+            description={`
+              The rank system represents a BattleFly's overall performance in the  Hyperdome. 
+              If a player wins, their rank goes up. If they lose, their rank goes down.\r\n
+
+              There are 6 Leagues ranks: Larvae, Pupa, Monarch, Predator, Apex & Champion.\r\n
+
+              Champion Rank is a special rank comprised of only the top 10 BattleFlys ABOVE Apex I, 
+              with these elite flys earning outsized rewards. With the right skill and determination 
+              you can land your BattleFly in the top 10 BattleFlys and guarantee yourself a daily MAGIC reward.`}
+            btnLink="https://play.battlefly.game"
+            btnText="Get Started"
+            reverse
+          />,
+          <HeroSlideImageComponent
+            key="slide-3"
+            customBgPos="bg-left-top"
+            imageURL="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/63efca2627bb35d3a136d6bf_Arenas_bk2.png"
+            imageTransform="scaleX(-1)"
+            title="Rewards"
+            description={`
+              There are three ways BattleFlys can earn MAGIC: \r\n
+              1. Battle Winnings: Earn 0.09 MAGIC from each Battle won.\r\n
+              2. Daily Leaderboard Payout: Earn daily MAGIC rewards for winning the most battles in your rank.\r\n
+              3. Champion Leaderboard Payout: Rank up to the top 10 BattleFlys above Apex I.`}
+            btnLink="https://play.battlefly.game"
+            btnText="Get Started"
+          />,
+        ]}
+      />
     </>
   );
 };
