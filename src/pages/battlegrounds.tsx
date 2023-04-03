@@ -1,6 +1,16 @@
 import HeroFullVideoComponent from "@/components/battlegrounds/heroFullVideo";
-import { type NextPage } from "next";
 import HeroAnimatedImageComponent from "@/components/battlegrounds/heroImageAnimated";
+import HeroSlideImageComponent from "@/components/battlegrounds/heroSlideImage";
+import { type NextPage } from "next";
+
+import dynamic from "next/dynamic";
+
+const SwiperComponent = dynamic(
+  () => import("@/components/battlegrounds/swiper"),
+  {
+    ssr: false,
+  }
+);
 
 const Home: NextPage = () => {
   return (
