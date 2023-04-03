@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 
       <HeroImageComponent
         imageURL="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/64084a7b43fefc233a10a0e5_Image-p-800.png"
-        divCustomClasses="md:bg-blend-color-dodge"
+        divCustomClasses="bg-base-300 bg-left md:bg-blend-color-dodge"
         title="The BattleFly - A beautiful Assassin"
         description={`
         Each BattleFly is a one-of-a-kind blend of brutal power and stunning beauty with the potential to deliver a positive return on
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
       {/* Content 3 */}
 
       <HeroImageComponent
-        divCustomClasses="bg-base-100"
+        divCustomClasses="bg-base-100 bg-left"
         imageURL="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/64084acb19bdd63e06c2e122_Tex-R-Image-Full-Width.png"
         imageTransform="scaleX(-1)"
         title="Play to Earn"

@@ -30,9 +30,13 @@ function HeroImageComponent({
   return (
     <div
       className={classNames(
-        reverse ? "bg-base-300 bg-left" : "bg-base-200 bg-right",
-        "hero bg-blend-color-dodge md:bg-cover md:bg-blend-lighten",
-        divCustomClasses ? divCustomClasses : ""
+        // use custom values or fallback to the default
+        divCustomClasses
+          ? divCustomClasses
+          : reverse
+          ? "bg-base-300 bg-left"
+          : "bg-base-200 bg-right",
+        "hero bg-blend-color-dodge md:bg-cover md:bg-blend-lighten"
       )}
       style={{
         backgroundImage: `url(${imageURL})`,
