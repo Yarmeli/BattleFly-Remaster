@@ -19,7 +19,7 @@ const navigation = [
         name: "White Paper",
         href: "#",
       },
-      { name: "FAQ", href: "/faq" },
+      { name: "FAQ", href: "#" },
       { name: "Strategy Guide", href: "#" },
     ],
   },
