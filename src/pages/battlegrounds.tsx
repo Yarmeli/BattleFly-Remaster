@@ -5,10 +5,18 @@ import HeroTwoImageComponent from "@/components/battlegrounds/heroTwoImages";
 import { type NextPage } from "next";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 
 const SwiperComponent = dynamic(
   () => import("@/components/battlegrounds/swiper"),
+  {
+    ssr: false,
+  }
+);
+
+const SwiperCoverflowComponent = dynamic(
+  () => import("@/components/battlegrounds/swiperCoverflow"),
   {
     ssr: false,
   }
@@ -138,6 +146,57 @@ const Home: NextPage = () => {
         secondImageAlt="Image of the mod loadout"
         reverse
       />
+
+      {/* Coverflow Effect */}
+
+      <SwiperCoverflowComponent
+        images={[
+          <Image
+            key="image-1"
+            src="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/641be86113ab6ea32e472116_DeepDive-Cooounter%20Playooor.jpg"
+            width={400}
+            height={600}
+            alt="Counter Player Mod"
+          />,
+          <Image
+            key="image-2"
+            src="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/641be870c2f5a96f17c79704_DeepDive-CriticoolHitooor%20(1).jpg"
+            width={400}
+            height={600}
+            alt="Critical Hit Mod"
+          />,
+          <Image
+            key="image-3"
+            src="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/63f13f3e8c2e215cf80e4283_deep_slide_bk1.png"
+            width={400}
+            height={600}
+            alt="Farmer Mod"
+          />,
+          <Image
+            key="image-4"
+            src="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/641be890c17bb1389d375feb_DeepDive-Freezooor.jpg"
+            width={400}
+            height={600}
+            alt="Freezer Mod"
+          />,
+          <Image
+            key="image-5"
+            src="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/641be86113ab6ea32e472116_DeepDive-Cooounter%20Playooor.jpg"
+            width={400}
+            height={600}
+            alt="Counter Player Mod"
+          />,
+          <Image
+            key="image-6"
+            src="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/641be870c2f5a96f17c79704_DeepDive-CriticoolHitooor%20(1).jpg"
+            width={400}
+            height={600}
+            alt="Critical Hit Mod"
+          />,
+        ]}
+      />
+
+      {/* Call To Action - Play Now */}
 
       <div className="hero bg-base-200">
         <div className="hero-content flex-col text-center md:flex-row">
