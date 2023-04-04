@@ -1,9 +1,11 @@
 import HeroFullVideoComponent from "@/components/battlegrounds/heroFullVideo";
 import HeroAnimatedImageComponent from "@/components/battlegrounds/heroImageAnimated";
 import HeroSlideImageComponent from "@/components/battlegrounds/heroSlideImage";
+import HeroTwoImageComponent from "@/components/battlegrounds/heroTwoImages";
 import { type NextPage } from "next";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const SwiperComponent = dynamic(
   () => import("@/components/battlegrounds/swiper"),
@@ -109,6 +111,49 @@ const Home: NextPage = () => {
           />,
         ]}
       />
+
+      {/* Two Image Component */}
+
+      <HeroTwoImageComponent
+        imageURL="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/6408502fb78deb1b276626d9_Component%202%20-%20Slider%20(1).png"
+        title="Mod Packs"
+        description={`
+      Elevate your BattleFly by strategically selecting the perfect mod from a Modpack to upgrade your gear and dominate the competition!
+    `}
+        btnLink="https://www.battlefly.game/blog-categorie/tips-and-tricks"
+        btnText="Find out more"
+        secondImageURL="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/6422b23b3271b540c8280dbe_ModCards-PNG-p-500.png"
+        secondImageAlt="5 different mod cards that can be used in the game"
+      />
+
+      <HeroTwoImageComponent
+        imageURL="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/6408502fb78deb5c726626d4_Group%2010.png"
+        title="Mod Loadout"
+        description={`
+        Experiment with loadouts in battle and swap out mods from your inventory for optimal performance.
+    `}
+        btnLink="https://www.battlefly.game/blog-categorie/tips-and-tricks"
+        btnText="Find out more"
+        secondImageURL="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/6422b4093da290748e6400dd_image%20(1)-p-800.png"
+        secondImageAlt="Image of the mod loadout"
+        reverse
+      />
+
+      <div className="hero bg-base-200">
+        <div className="hero-content flex-col text-center md:flex-row">
+          <div className="p-5">
+            <h1 className="text-3xl font-bold uppercase">
+              Ready to get started?
+            </h1>
+            <p className="pt-6 text-lg">See you in the Hyperdome!</p>
+            <Link href="https://play.battlefly.game/" target="_blank">
+              <button className="btn-primary btn my-4 -skew-x-12 font-bold">
+                <p className="skew-x-12">Play Now</p>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
