@@ -1,3 +1,7 @@
+// This is using Swiper Element instead of Swiper React due to the following warning:
+// "Swiper React components will likely to be removed in future versions.
+// It is recommended to migrate to Swiper Element instead."
+
 // import function to register Swiper custom elements
 import { register } from "swiper/element/bundle";
 // register Swiper custom elements
