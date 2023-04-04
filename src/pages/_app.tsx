@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import NavbarComponent from "@/components/common/navbar";
 import FooterComponent from "@/components/common/footer";
+import { ToastContainer } from "react-toastify";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
@@ -20,6 +21,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
         <NavbarComponent />
         <main className="flex flex-grow flex-col items-center justify-center">
           <Component {...pageProps} />
+          <ToastContainer />
         </main>
         <FooterComponent />
       </div>
