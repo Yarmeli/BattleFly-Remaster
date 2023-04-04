@@ -1,28 +1,22 @@
-# Create T3 App
+# BattleFly Remastered
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This project was created to rework the existing [BattleFly website](https://www.battlefly.game/). I went through the website and found some minor issues that could be fixed in their current implementation, and decided to rework some of the pages of the website.
 
-## What's next? How do I make an app with this?
+I have only reworked the front-end, however, NextJS also supports back-end code. This project can easily be extended to include custom back-end logic
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+This project is using the [T3 Stack](https://create.t3.gg/) and since it's mainly focused on the front-end, I have used Tailwind to style it.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Front-End libraries used:
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
-
-## Learn More
-
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+- [React DaisyUI](https://github.com/daisyui/react-daisyui) (React component library for DaisyUI)
+- [Framer-Motion](https://github.com/framer/motion) - Add custom transitions in the `/Battlegrounds` page
+- [React-Toastify](https://github.com/fkhadra/react-toastify) - Add a toast message when copying discord handles in the `/team` page
 
 ## How do I deploy this?
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+I am currently using [Vercel](https://create.t3.gg/en/deployment/vercel) to handle all the deployment configuration. It is as simple as:
+
+1. Login with GitHub
+2. Select the correct project
+3. Set any environment variables (if needed)
+4. Enjoy - Push and let Vercel do its thing
