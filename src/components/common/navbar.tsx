@@ -28,7 +28,7 @@ const navigation = [
     name: "About us",
     submenu: [
       { name: "Team", href: "/team" },
-      { name: "Careers", href: "/careers" },
+      { name: "Careers", href: "#" },
     ],
   },
   { name: "Shop", href: "#" },
