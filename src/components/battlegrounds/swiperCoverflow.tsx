@@ -13,18 +13,20 @@ type Props = {
 
 function SwiperCoverflowComponent({ images }: Props) {
   return (
-    <section className="w-full">
+    <section className="w-full p-5">
       <swiper-container
         //   REMEMBER TO USE PARAMETERS AS "kebab-case"
         //   e.g. use "slides-per-view" instead of "slidesPerView"
         effect="coverflow"
         grab-cursor="true"
-        slides-per-view="2"
-        initial-slide="1"
+        slides-per-view="3"
+        initial-slide="2"
         loop
+        autoplay
+        autoplay-pause-on-mouse-enter="true"
         navigation
         coverflow-effect-rotate="0"
-        coverflow-effect-stretch="500"
+        coverflow-effect-stretch="300"
         coverflow-effect-depth="200"
         coverflow-effect-modifier="1"
         coverflow-effect-slide-shadows="false"

@@ -193,6 +193,13 @@ const Home: NextPage = () => {
             height={600}
             alt="Critical Hit Mod"
           />,
+          <Image
+            key="image-7"
+            src="https://assets.website-files.com/61ecf535450144ab4fe1e3c0/63f13f3e8c2e215cf80e4283_deep_slide_bk1.png"
+            width={400}
+            height={600}
+            alt="Farmer Mod"
+          />,
         ]}
       />
 
