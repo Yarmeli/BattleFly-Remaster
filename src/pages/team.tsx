@@ -14,7 +14,7 @@ function TeamPage() {
       username: "Ben",
       role: "Founder",
       discord: "OfficialAbenger#6509",
-      twitter: "benbeath",
+      twitter: "OfficialAbenger",
     },
     {
       imageUrl:
